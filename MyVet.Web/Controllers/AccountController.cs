@@ -1,18 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using MyVet.Web.Data;
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using MyVet.Web.Data.Entities;
 using MyVet.Web.Helpers;
 using MyVet.Web.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyVet.Web.Controllers
 {

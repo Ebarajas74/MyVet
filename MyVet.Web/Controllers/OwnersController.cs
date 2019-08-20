@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyVet.Web.Data;
 using MyVet.Web.Data.Entities;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyVet.Web.Controllers
 {
@@ -23,9 +19,11 @@ namespace MyVet.Web.Controllers
         }
 
         // GET: Owners
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Owners.ToListAsync());
+            return View(_context.Owners.
+                Include(o => o.User)
+                .Include(o => o.Pets));
         }
 
         // GET: Owners/Details/5

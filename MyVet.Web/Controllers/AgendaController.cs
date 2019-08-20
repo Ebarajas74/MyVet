@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyVet.Web.Data;
 using MyVet.Web.Helpers;
 using MyVet.Web.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyVet.Web.Controllers
 {

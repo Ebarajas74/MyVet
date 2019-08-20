@@ -41,14 +41,14 @@
 
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
-                            <li class="dropdown">
+                            @*<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a asp-area="" asp-controller="Managers" asp-action="Index">Managers</a></li>
                                     <li><a asp-area="" asp-controller="PetTypes" asp-action="Index">Pet Types</a></li>
                                     <li><a asp-area="" asp-controller="ServiceTypes" asp-action="Index">Service Types</a></li>
                                 </ul>
-                            </li>
+                            </li>*@
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Owners" asp-action="Index">Owners</a>
@@ -56,7 +56,15 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Managers" asp-action="Index">Managers</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Agenda" asp-action="Index">Agendda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="PetTypes" asp-action="Index">Pet Types</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ServiceTypes" asp-action="Index">Service Types</a>
+                            </li>
                         }
 
 
