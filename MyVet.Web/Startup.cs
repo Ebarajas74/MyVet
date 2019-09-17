@@ -75,6 +75,8 @@ namespace MyVet.Web
             services.AddScoped<IUserHelper, UserHelper>();
             //services.AddScoped<IMailHelper, MailHelper>();
             services.AddScoped<ICombosHelper, CombosHelper>();
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IAgendaHelper, AgendaHelper>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
